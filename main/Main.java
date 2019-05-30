@@ -3,7 +3,6 @@ package main;
 
 import javax.swing.*;
 import java.io.FileNotFoundException;
-//import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,11 +20,7 @@ public class Main  {
 		Scanner scanner = new Scanner(System.in);
 		int itemCounter;
 		int staffType;
-		/**
-		PrintWriter report = new PrintWriter("StockReport.txt");
-		PrintWriter sWages = new PrintWriter("StockTakerWages.txt");
-		PrintWriter vWages = new PrintWriter("SupervisorWages.txt");
-		*/
+	
 		List<Item> itemList = new ArrayList<Item>();
 
 		do {
@@ -45,7 +40,7 @@ public class Main  {
 					Item item = new Item();
 					itemList.add(item);
 					System.out.println(item.toString());
-					//report.println (item.print());
+					
 				}
 				
 			} else if (option == 2) {
@@ -55,12 +50,12 @@ public class Main  {
 				case 1:
 					Staff stockTaker = new StockTaker();
 					System.out.println(stockTaker.toString());
-					//sWages.println(stockTaker.print());
+					
 					break;
 				case 2:
 					Staff supervisor = new Supervisor();
 					System.out.println(supervisor.toString());
-					//vWages.println(supervisor.print());
+					
 					break;
 				}
 			} else if(option == 3){
@@ -86,9 +81,7 @@ public class Main  {
 			} while (option != 1 && option != 2 && option != 3 && option != -1);
 			
 		} // end of 2nd while
-		 //report.close();
-		 //sWages.close();
-		 //vWages.close();
+		 
 	}
 
 }
